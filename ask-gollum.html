@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+        
+    </head>
+    <body style="background-color: 3b6233; color:ffffff;  font-family: 'Macondo Swash Caps', cursive; font-weight: 400;
+font-style: normal;">
+        <h1 id="title" style="text-align: center;">Everything Lord Of The Rings</h1>
+        <div id="menu" style="font-size: 19pt ;">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="ask-gollum.html">Ask Gollum</a></li>
+                <li>Quizzes</li>
+                <li>Information</li>
+                <li>Games</li>
+            </ul>
+        </div>
+        <div style="font-size: 19pt;text-align: center;">
+            What does it want, Precious?
+        </div>
+        <div style="font-size: 19pt;text-align: center;">
+                <input/>
+                <div onclick="askGollum()">Ask question</div>
+        </div>
+        <div style="text-align: center;">
+            <img src="images/gollum.png" width="500"/>
+        </div>
+        <div id="answer" style="font-size: 19pt; text-align: center;">
+        </div>
+        <script>
+            function askGollum() {
+                const quotes = [
+                    "We wants it, we needs it. Must have the precious.",
+                    "My precious, my precious!",
+                    "They stole it from us. Sneaky little hobbitses, wicked, tricksy, false.",
+                    "They do not see what lies ahead, when Sun has faded and Moon is dead.",
+                    "Smeagol lied!",
+                    "Deserves it!",
+                    "Not this way, master!",                 
+                    "Curse the Baggins!",
+                    "What's taters, precious?",
+                    "And orcs don't taste very nice does they precious?",
+                    "What… has it got… in its nasty pocketsess?!?!?!",
+                    "Gives it to us raw and wrigllllling!!",
+                    "First they will cheat you, hurt you, lie.",
+                    "You don't have any friends. Nobody likes you.",
+                    "We told him to go away, and away he goes... Smeagol is free!"
+                ];
+
+                quotenumber=Math.floor(Math.random() * 14);
+                quote=quotes[quotenumber];
+                document.getElementById("answer").innerHTML = "\"" +quote + "\"";
+                return false;
+            }
+        </script>
+    </body>
+
+</html>
